@@ -1,23 +1,22 @@
 import React from 'react';
+import { Route, BrowserRouter } from 'react-router-dom';
+
 import Navmenu from './components/common/Navmenu';
-import Banner from './components/LandingPage/Banner';
-import About from './components/LandingPage/About';
-import Corevalue from './components/LandingPage/Corevalue';
-import Expertiese from './components/LandingPage/Expertiese';
-import Info from './components/LandingPage/Info';
-import Footer from './components/LandingPage/Footer';
+
+import Footer from './components/common/Footer';
+import Landing from './components/LandingPage/Landing';
+import Aboutus from './components/Aboutus/Aboutus';
 
 
 function App() {
   return (
     <div>
-      <Navmenu />
-      <Banner />
-      <About />
-      <Corevalue />
-      <Expertiese />
-      <Info />
-      <Footer />
+      <BrowserRouter>
+        <Navmenu />
+        <Route exact path="/" component={Landing} />
+        <Route exact path="/about_us" component={Aboutus} />
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }
