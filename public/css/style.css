@@ -1603,123 +1603,246 @@ a.move-top {
 	
 }
 
-.contact-info-area {
-	padding-bottom: 70px;
-  }
-  
-  .contact-info-area .contact-info .item {
-	-moz-box-shadow: 0 0 10px #cccccc;
-	-webkit-box-shadow: 0 0 10px #cccccc;
-	-o-box-shadow: 0 0 10px #cccccc;
-	box-shadow: 0 0 10px #cccccc;
-	padding: 50px 30px;
-	text-align: center;
-	background: #ffffff none repeat scroll 0 0;
-  }
-  
-  .contact-info-area .contact-info .item i {
-	color: #ffb606;
-	display: block;
-	font-size: 60px;
-	text-align: center;
-  }
-  
-  .contact-info-area .contact-info .item .info {
-	margin-top: 20px;
-  }
-  
-  .contact-info-area .contact-info .item .info h4 {
-	font-weight: 600;
-	margin-bottom: 10px;
-	text-transform: uppercase;
-  }
-  
-  .contact-info-area .contact-info .item .info p {
-	margin: 0;
-  }
-  
-  .contact-info-area .maps-form .form {
-	padding-left: 35px;
-  }
-  
-  .contact-info-area .maps-form {
-	display: inline-block;
-	margin-top: -10px;
-  }
-  
-  .contact-info-area .maps-form .maps {
-	overflow: hidden;
-  }
-  
-  .contact-info-area .maps-form h2,
-  .contact-info-area .maps-form h3,
-  .contact-info-area .maps-form h4 {
-	font-weight: 600;
-	text-transform: capitalize;
-  }
-  
-  .contact-info-area .maps-form iframe {
-	height: 465px;
-	margin-bottom: -10px;
-	margin-top: 10px;
+.w3layouts-main{
+    background-image: url('../images/bg.jpg');
+    background-repeat: repeat-x;
+    animation: slideleft 20000s infinite linear;
+    -webkit-animation: slideleft 20000s infinite linear;
+    background-size: cover;
+	-webkit-background-size:cover;
+	-moz-background-size:cover; 
+    background-attachment: fixed;
+    position: relative;
+	min-height: 100vh;
+}
+
+.bg-layer {
+    background: rgba(0, 0, 0, 0.7);
+	min-height: 100vh;
+}
+
+.header-main {
+	max-width: 310px;
+	margin: 0 auto;
 	position: relative;
-	width: 100%;
-	z-index: 1;
-  }
-  
-  .contact-info-area .maps-form {
+	z-index: 999;
+	padding: 3em 2em;
+	background: rgba(255, 255, 255, 0.04);
+	-webkit-box-shadow: -1px 4px 28px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: -1px 4px 28px 0px rgba(0,0,0,0.75);
+	box-shadow: -1px 4px 28px 0px rgba(0,0,0,0.75);
+}
+
+@media(max-width:384px){
+	.main-icon span.fa {
+		margin-bottom: .6em;
+	}
+	.header-main {
+		max-width: 310px;
+		margin: 0 1em;
+	}
+	.header-left-bottom input[type="email"],.header-left-bottom input[type="password"] {
+		width: 88%;
+	}
+	.social ul li {
+		margin: 0 2px;
+	}
+	h1 {
+		font-size: 30px;
+	}
+} 
+
+.header-left-bottom input[type="email"] {
+    outline: none;
+    font-size: 15px;
+    color: #222;
+	border:none;
+    width: 90%;
+    display: inline-block;
+    background: transparent;
+    letter-spacing: 1px;
+}
+.header-left-bottom input[type="password"]{
+	outline: none;
+	font-size: 15px;
+    color: #222;
+	border:none;
+    width: 90%;
 	display: inline-block;
-	margin-top: -10px;
-  }
-  
-  .contact-info-area .maps-form input {
-	border: 1px solid #e7e7e7;
-	border-radius: inherit;
-	box-shadow: inherit;
-  }
-  
-  .contact-info-area .maps-form textarea {
-	border: 1px solid #e7e7e7;
-	border-radius: inherit;
-	box-shadow: inherit;
-	min-height: 150px;
-  }
-  
-  .contact-info-area .maps-form button {
-	background: #002147 none repeat scroll 0 0;
-	border: medium none;
-	color: #ffffff;
-	font-family: "Poppins",sans-serif;
-	font-weight: 600;
-	padding: 10px 25px;
+	background: transparent;
+    letter-spacing: 1px;
+}
+.header-left-bottom button.btn {
+    background: #007cc0;
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: .8em 2em;
+    letter-spacing: 1px;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: none;
+	width: 100%;
+}
+
+/*-- agileits --*/
+.header-left-bottom p {
+    font-size: 17px;
+    color: #000;
+    display: inline-block;
+    width: 50%;
+    margin: 20px 0 0;
+    letter-spacing: 1px;
+    float: left;
+}
+
+.header-left-bottom p.right {
+	text-align: right;
+}
+.header-left-bottom p a {
+	font-size: 11px;
+	color: #e2e2e2;
 	text-transform: uppercase;
+}
+
+.header-left {
+	background: #fff;
+	padding: 0px;
   }
-  
-  .contact-info-area .maps-form button i {
-	margin-left: 3px;
-  }
-  
-  form img.loader {
-	margin-left: 5px;
-  }
-  
-  .contact-info-area form .alert-notification {
-	padding: 0;
-  }
-  
-  .contact-info-area form .alert-notification h3 {
-	color: green;
-	margin-bottom: 5px;
-  }
-  
-  .contact-info-area form .alert-notification .alert-error {
-	background: #e7e7e7 none repeat scroll 0 0;
-	color: red;
-	margin-top: 15px;
-	margin-bottom: 0;
-  }
-  
-  .contact-info-area form .alert-notification .alert-success {
-	margin-top: 15px;
-	margin-bottom: 0;
-  }
+
+  .w3ls-header {
+    padding: 0em 0 0;
+}
+.icon1 {
+	margin: 0 0 1em;
+	padding: .8em 1em;
+	background: rgba(255, 255, 255, 0.94);
+}
+.icon1 span.fa {
+    color: #222;
+    width: 22px;
+}
+.main-icon {
+    text-align: center;
+}
+.main-icon span.fa{
+    font-size: 50px;
+    color: #fff;
+    margin-bottom: 1em;
+}
+.wthree li {
+    display: inline-block;
+}
+a {
+    color: #585858;
+    margin: 0em;
+}
+
+.sign-up {
+    margin: 2em 0;
+}
+
+.sign-up h2 {
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    background: #fbbc05;
+    width: 40px;
+    height: 40px;
+    line-height: 1.9em;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+::-webkit-input-placeholder{
+    color: #333!important;
+}
+
+.heading h5 {
+    color: #c5c5c5;
+    color: #000000;
+    margin-top: 8px;
+    font-size: 20px;
+}
+
+.login-check {
+    position: relative;
+}
+.checkbox i {
+    position: absolute;
+    top: 0px;
+    left: 0%;
+    text-align: center;
+    display: block;
+    width: 19px;
+    height: 17px;
+    outline: none;
+    background: #fff;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -o-border-radius: 0px;
+    cursor: pointer;
+}
+.checkbox input:checked + i:after {
+    opacity: 1;
+}
+.checkbox input + i:after {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.1s;
+    -o-transition: opacity 0.1s;
+    -ms-transition: opacity 0.1s;
+    -moz-transition: opacity 0.1s;
+    -webkit-transition: opacity 0.1s;
+}
+.checkbox input + i:after {
+    content: url(../images/tick.png);
+    top: -1px;
+    left: 2px;
+    width: 15px;
+    height: 15px;
+}
+
+.checkbox {
+    position: relative;
+    display: block;
+    padding-left: 30px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-size: 14px;
+    color: #fff;
+}
+input[type="checkbox" i] {
+    display: none;
+}
+
+@keyframes slideleft {
+    from {
+        background-position: 0%;
+    }
+    to {
+        background-position: 90000%;
+    }
+}
+
+@-webkit-keyframes slideleft {
+    from {
+        background-position: 0%;
+    }
+    to {
+        background-position: 90000%;
+    }
+}
+
+@media(max-width:667px){
+	
+	h1 {
+		font-size: 40px;
+		letter-spacing: 3px;
+	}
+}
