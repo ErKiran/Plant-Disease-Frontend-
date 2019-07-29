@@ -13,35 +13,19 @@ const Banner = () => {
                     <Slides
                         banner="banner-top"
                         overlay
-                        title="Harvesting"
-                        main_desc="Cultivating new crops to make farmers increase profits"
+                        title="Neural Nets"
+                        main_desc="State-of-the-Art Deep Learning Model"
+                        sub_desc="Neural Networks Scans through the leaf of Plant to detect the health condition of 
+                        the plant"
+                    />
+                    <Slides
+                        banner="banner-top1"
+                        overlay="overlay1"
+                        title="Internet of Things (IoT)"
+                        main_desc="Interconnection of Hardware with the Cloud Server"
                         sub_desc="Ut enim ad minim quis nostrud exerci sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua nostrud exerci sed."
-                    />
-                    <Slides
-                    banner="banner-top1"
-                    overlay="overlay1"
-                    title="Harvesting"
-                    main_desc="Cultivating new crops to make farmers increase profits"
-                    sub_desc="Ut enim ad minim quis nostrud exerci sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua nostrud exerci sed."
                      />
-                    <Slides
-                    banner="banner-top2"
-                    overlay
-                    title="Harvesting"
-                    main_desc="Cultivating new crops to make farmers increase profits"
-                    sub_desc="Ut enim ad minim quis nostrud exerci sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua nostrud exerci sed."
-                    />
-                    <Slides
-                    banner="banner-top3"
-                    overlay="overlay1"
-                    title="Harvesting"
-                    main_desc="Cultivating new crops to make farmers increase profits"
-                    sub_desc="Ut enim ad minim quis nostrud exerci sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua nostrud exerci sed."
-                    />
                    </ul>
                    <div className="arrows">
 				<label htmlFor="slides_1"></label>
