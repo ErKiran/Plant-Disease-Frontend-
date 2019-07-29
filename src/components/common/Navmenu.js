@@ -16,7 +16,7 @@ const Navmenu = () => {
                         <li className="mr-lg-4 mr-2"><Link to="/about_us">About Us</Link></li>
                         <li className="mr-lg-4 mr-2"><a href="services.html">Services</a></li>
                         <li className="mr-lg-4 mr-2"><a href="comingsoon.html">Gallery</a></li>
-                        <li className="mr-lg-4 mr-2"><a href="contact.html">Contact</a></li>
+                        <li className="mr-lg-4 mr-2"><Link to="contact">Contact</Link></li>
                     </ul>
                 </nav>
             </div>

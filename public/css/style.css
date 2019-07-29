@@ -1603,3 +1603,123 @@ a.move-top {
 	
 }
 
+.contact-info-area {
+	padding-bottom: 70px;
+  }
+  
+  .contact-info-area .contact-info .item {
+	-moz-box-shadow: 0 0 10px #cccccc;
+	-webkit-box-shadow: 0 0 10px #cccccc;
+	-o-box-shadow: 0 0 10px #cccccc;
+	box-shadow: 0 0 10px #cccccc;
+	padding: 50px 30px;
+	text-align: center;
+	background: #ffffff none repeat scroll 0 0;
+  }
+  
+  .contact-info-area .contact-info .item i {
+	color: #ffb606;
+	display: block;
+	font-size: 60px;
+	text-align: center;
+  }
+  
+  .contact-info-area .contact-info .item .info {
+	margin-top: 20px;
+  }
+  
+  .contact-info-area .contact-info .item .info h4 {
+	font-weight: 600;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+  }
+  
+  .contact-info-area .contact-info .item .info p {
+	margin: 0;
+  }
+  
+  .contact-info-area .maps-form .form {
+	padding-left: 35px;
+  }
+  
+  .contact-info-area .maps-form {
+	display: inline-block;
+	margin-top: -10px;
+  }
+  
+  .contact-info-area .maps-form .maps {
+	overflow: hidden;
+  }
+  
+  .contact-info-area .maps-form h2,
+  .contact-info-area .maps-form h3,
+  .contact-info-area .maps-form h4 {
+	font-weight: 600;
+	text-transform: capitalize;
+  }
+  
+  .contact-info-area .maps-form iframe {
+	height: 465px;
+	margin-bottom: -10px;
+	margin-top: 10px;
+	position: relative;
+	width: 100%;
+	z-index: 1;
+  }
+  
+  .contact-info-area .maps-form {
+	display: inline-block;
+	margin-top: -10px;
+  }
+  
+  .contact-info-area .maps-form input {
+	border: 1px solid #e7e7e7;
+	border-radius: inherit;
+	box-shadow: inherit;
+  }
+  
+  .contact-info-area .maps-form textarea {
+	border: 1px solid #e7e7e7;
+	border-radius: inherit;
+	box-shadow: inherit;
+	min-height: 150px;
+  }
+  
+  .contact-info-area .maps-form button {
+	background: #002147 none repeat scroll 0 0;
+	border: medium none;
+	color: #ffffff;
+	font-family: "Poppins",sans-serif;
+	font-weight: 600;
+	padding: 10px 25px;
+	text-transform: uppercase;
+  }
+  
+  .contact-info-area .maps-form button i {
+	margin-left: 3px;
+  }
+  
+  form img.loader {
+	margin-left: 5px;
+  }
+  
+  .contact-info-area form .alert-notification {
+	padding: 0;
+  }
+  
+  .contact-info-area form .alert-notification h3 {
+	color: green;
+	margin-bottom: 5px;
+  }
+  
+  .contact-info-area form .alert-notification .alert-error {
+	background: #e7e7e7 none repeat scroll 0 0;
+	color: red;
+	margin-top: 15px;
+	margin-bottom: 0;
+  }
+  
+  .contact-info-area form .alert-notification .alert-success {
+	margin-top: 15px;
+	margin-bottom: 0;
+  }
