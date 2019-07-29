@@ -12,7 +12,7 @@ const Banner = () => {
                 <ul>
                     <Slides
                         banner="banner-top"
-                        overlay="overlay"
+                        overlay
                         title="Harvesting"
                         main_desc="Cultivating new crops to make farmers increase profits"
                         sub_desc="Ut enim ad minim quis nostrud exerci sed do eiusmod tempor incididunt ut
@@ -28,7 +28,7 @@ const Banner = () => {
                      />
                     <Slides
                     banner="banner-top2"
-                    overlay="overlay"
+                    overlay
                     title="Harvesting"
                     main_desc="Cultivating new crops to make farmers increase profits"
                     sub_desc="Ut enim ad minim quis nostrud exerci sed do eiusmod tempor incididunt ut

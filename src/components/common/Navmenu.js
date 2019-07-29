@@ -15,7 +15,6 @@ const Navmenu = () => {
                     <li className="mr-lg-4 mr-2"><a href="services.html">Services</a></li>
                     <li className="mr-lg-4 mr-2"><a href="comingsoon.html">Gallery</a></li>
                     <li className="mr-lg-4 mr-2"><a href="contact.html">Contact</a></li>
-                    <li className="mr-lg-4 mr-2"><span><span className="fa fa-phone"></span> +12 345 6789</span></li>
                 </ul>
             </nav>
         </div>
