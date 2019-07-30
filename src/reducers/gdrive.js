@@ -7,7 +7,6 @@ const initialState = {
 export default function (state = initialState, action) {
     switch (action.type) {
         case SYNC_GDRIVE:
-            console.log(action)
             return {
                 ...state,
                 photos: action.payload

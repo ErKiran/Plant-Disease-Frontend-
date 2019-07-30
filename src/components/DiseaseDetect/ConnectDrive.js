@@ -1,22 +1,39 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import SingleBanner from '../common/SingleBanner';
+import Heading from '../common/Heading';
 import { syncGdrive } from '../../actions/sync_gdrive'
+import TeamMember from '../Aboutus/TeamMember';
 
 class ConnectDrive extends Component {
+    componentDidMount = () => {
+        this.props.syncGdrive();
+    }
     render() {
         const test = this.props.images;
-        console.log(test)
+        const gimages = test.photos;
         return (
             <div>
                 <SingleBanner />
-                <section className="contact py-5">
-                    <div className="container py-sm-3">
-                        <h3 className="heading mb-sm-5 mb-4 text-center">Connect Drive
-                        <span className="fa fa-google" aria-hidden="true"></span>
-                        </h3>
+                <Heading
+                    title="Connect Drive"
+                    icon="fa fa-google"
+                />
+                <div className="team py-5" id="team">
+                    <div className="container py-lg-3">
+                        <div className="row team-bottom text-center">
+                            {Object.values(gimages).map(i => i.map(i =>
+                                <TeamMember
+                                    image={i}
+                                    key={i}
+                                    class="col-lg-3 col-sm-6 team-grid"
+                                >
+                                    Predict
+                                </TeamMember>
+                            ))}
+                        </div>
                     </div>
-                </section>
+                </div>
             </div>
         );
     }
@@ -26,4 +43,4 @@ const mapStateToProps = state => ({
     images: state.images
 });
 
-export default connect(mapStateToProps, { syncGdrive })(ConnectDrive);;
+export default connect(mapStateToProps, { syncGdrive })(ConnectDrive);
