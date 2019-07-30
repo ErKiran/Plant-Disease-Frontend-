@@ -45,7 +45,7 @@ const Footer = () => {
                     </div>
                 </div>
             </footer>
-            <a href="#home" className="move-top text-center"></a>
+            <a href="#" className="move-top text-center"></a>
         </>
     );
 };

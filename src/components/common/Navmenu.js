@@ -15,7 +15,7 @@ const Navmenu = () => {
                         <li className="mr-lg-4 mr-2 active"><Link to="/">Home</Link></li>
                         <li className="mr-lg-4 mr-2"><Link to="/about_us">About Us</Link></li>
                         <li className="mr-lg-4 mr-2"><Link to="/detect">Detect Disease</Link></li>
-                        <li className="mr-lg-4 mr-2"><a href="comingsoon.html">Gallery</a></li>
+                        <li className="mr-lg-4 mr-2"><Link to="/connect_drive">Connect Drive</Link></li>
                         <li className="mr-lg-4 mr-2"><Link to="contact">Contact</Link></li>
                         <li className="mr-lg-4 mr-2"><Link to="login">Login</Link></li>
                     </ul>

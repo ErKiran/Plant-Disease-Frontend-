@@ -10,6 +10,7 @@ import Contact from './components/Contact/Contact';
 import Login from './components/Auth/Login';
 import Register from './components/Auth/Register';
 import ImageUpload from './components/DiseaseDetect/ImageUpload';
+import ConnectDrive from './components/DiseaseDetect/ConnectDrive';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route exact path="/login" component={Login} />
         <Route exact path="/register" component={Register} />
         <Route exact path="/detect" component={ImageUpload} />
+        <Route exact path="/connect_drive" component={ConnectDrive} />
         <Footer />
       </BrowserRouter>
     </div>

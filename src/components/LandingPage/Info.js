@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Info = () => {
     return (
@@ -12,7 +13,7 @@ const Info = () => {
                                 laudantium, totam rem aperiam, eaqu ipsa quae ab illo quasi architi ecto beatae vitae dicta
 						sunt dolor ipsum.</p>
                             <a href="services.html" className="btn mr-3">How It Works</a>
-                            <a href="contact.html" className="btn btn1"> Contact Us </a>
+                            <Link to="/contact" className="btn btn1"> Contact Us </Link>
                         </div>
                     </div>
                 </div>
