@@ -9,6 +9,7 @@ import Aboutus from './components/Aboutus/Aboutus';
 import Contact from './components/Contact/Contact';
 import Login from './components/Auth/Login';
 import Register from './components/Auth/Register';
+import ImageUpload from './components/DiseaseDetect/ImageUpload';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/register" component={Register} />
+        <Route exact path="/detect" component={ImageUpload} />
         <Footer />
       </BrowserRouter>
     </div>
