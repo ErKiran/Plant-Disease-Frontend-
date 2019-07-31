@@ -1,7 +1,7 @@
 import { LOAD_MODEL } from '../actions/types';
 
 const initialState = {
-    model: {}
+    disease: {}
 };
 
 export default function (state = initialState, action) {
@@ -9,7 +9,7 @@ export default function (state = initialState, action) {
         case LOAD_MODEL:
             return {
                 ...state,
-                model: action.payload
+                disease: action.payload
             };
         default:
             return state;
