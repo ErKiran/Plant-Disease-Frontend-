@@ -26,7 +26,6 @@ function App() {
         <Route exact path="/login" component={Login} />
         <Route exact path="/register" component={Register} />
         <Route exact path="/detect" component={SimpleImage} />
-        <Route exact path="/connect_drive" component={ConnectDrive} />
         <Footer />
       </BrowserRouter>
     </div>
