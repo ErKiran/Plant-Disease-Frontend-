@@ -28,7 +28,11 @@ class SimpleImage extends Component {
     }
     render() {
         const result = this.props.disease;
-        top_three(result)
+        console.log(result)
+        if(!(Object.keys(result.disease).length === 0)){
+        const get =top_three(result);
+        console.log(Object.values(get).slice(0,3))
+        }
         return (
             <div>
                 <SingleBanner />

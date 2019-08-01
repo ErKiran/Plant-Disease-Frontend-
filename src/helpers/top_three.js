@@ -2,22 +2,23 @@ const disease = require('./diseases.json');
 
 export const top_three = (res) =>{
     if(!(Object.keys(res.disease).length === 0)){
-    /*const tops = res.disease.result.sort().reverse();
-    console.log(tops)*/
-  /* const test= res.disease.result.map((val, ind) => {return {ind, val}})
-           .sort().resverse()
-           .map((obj) => obj.ind);
-           console.log(test)
-    }*/
-   let indexedTest;
-
-indexedTest = res.disease.result.map(function(e,i){return {ind: i, val: e}});
-console.log(indexedTest)
-// sort index/value couples, based on values
-indexedTest.sort().reverse();
-// make list keeping only indices
-const indices = indexedTest.map(function(e){return e.ind});
-console.log(indices)
-   
+let test = res.disease.result
+let test_with_index = [];
+for (let i in test) {
+    test_with_index.push([test[i], i]);
+}
+test_with_index.sort(function(left, right) {
+  return left[0] < right[0] ? -1 : 1;
+}).reverse();
+var indexes = [];
+test = [];
+for (let j in test_with_index) {
+    test.push(test_with_index[j][0]);
+    indexes.push(test_with_index[j][1]);
+} 
+let result = test.map(function (x, i) { 
+    return [x, Object.keys(disease)[indexes[i]]] 
+});
+return result
 }
 }
