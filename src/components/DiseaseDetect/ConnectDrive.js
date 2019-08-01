@@ -12,12 +12,12 @@ class ConnectDrive extends Component {
     }
     call_it = (img) => {
         this.props.load_model(img)
-	console.log(img)
+        console.log(img)
     }
     render() {
         const test = this.props.images;
         const gimages = test.photos;
-        this.call_it({photo:"https://lh3.googleusercontent.com/W96rjPJ2pKr2LoQ6kS25DnSzOVlf6sniN6Z6_fl-DaBj3cn_D9PaOq8negI_Vrt4njHEZRduOPc"})
+        this.call_it({ photo: "https://lh3.googleusercontent.com/W96rjPJ2pKr2LoQ6kS25DnSzOVlf6sniN6Z6_fl-DaBj3cn_D9PaOq8negI_Vrt4njHEZRduOPc" })
         return (
             <div>
                 <SingleBanner />
@@ -28,7 +28,7 @@ class ConnectDrive extends Component {
                 <div className="team py-5" id="team">
                     <div className="container py-lg-3">
                         <div className="row team-bottom text-center">
-                            {Object.values(gimages).slice(0,8).map(i => i.map(i =>
+                            {Object.values(gimages).map(i => i.slice(0, 8).map(i =>
                                 <TeamMember
                                     image={i}
                                     key={i}
