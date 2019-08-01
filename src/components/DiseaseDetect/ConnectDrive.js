@@ -2,16 +2,22 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import SingleBanner from '../common/SingleBanner';
 import Heading from '../common/Heading';
-import { syncGdrive } from '../../actions/sync_gdrive'
+import { syncGdrive } from '../../actions/sync_gdrive';
+import { load_model } from '../../actions/load_model';
 import TeamMember from '../Aboutus/TeamMember';
 
 class ConnectDrive extends Component {
     componentDidMount = () => {
         this.props.syncGdrive();
     }
+    call_it = (img) => {
+        this.props.load_model(img)
+	console.log(img)
+    }
     render() {
         const test = this.props.images;
         const gimages = test.photos;
+        this.call_it({photo:"https://lh3.googleusercontent.com/W96rjPJ2pKr2LoQ6kS25DnSzOVlf6sniN6Z6_fl-DaBj3cn_D9PaOq8negI_Vrt4njHEZRduOPc"})
         return (
             <div>
                 <SingleBanner />
@@ -40,7 +46,8 @@ class ConnectDrive extends Component {
 }
 
 const mapStateToProps = state => ({
-    images: state.images
+    images: state.images,
+    disease: state.disease
 });
 
-export default connect(mapStateToProps, { syncGdrive })(ConnectDrive);
+export default connect(mapStateToProps, { syncGdrive, load_model })(ConnectDrive);
