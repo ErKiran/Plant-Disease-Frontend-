@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import SingleBanner from "../common/SingleBanner";
 import { load_model } from '../../actions/load_model';
 import {top_three} from '../../helpers/top_three';
+import {get_recc} from '../../actions/get_recc';
 
 class SimpleImage extends Component {
     constructor(props) {
@@ -28,10 +29,14 @@ class SimpleImage extends Component {
     }
     render() {
         const result = this.props.disease;
-        console.log(result)
+        const soln = this.props.soln;
+        console.log(soln)
         if(!(Object.keys(result.disease).length === 0)){
         const get =top_three(result);
         console.log(Object.values(get).slice(0,3))
+        const predicted_disease = Object.values(get).slice(0,3)[0][1];
+        console.log(predicted_disease)
+        this.props.get_recc(predicted_disease);
         }
         return (
             <div>
@@ -47,7 +52,8 @@ class SimpleImage extends Component {
 }
 
 const mapStateToProps = state => ({
-    disease: state.get
+    disease: state.get,
+    soln: state.soln
 });
 
-export default connect(mapStateToProps, { load_model })(SimpleImage);
+export default connect(mapStateToProps, { load_model,get_recc })(SimpleImage);

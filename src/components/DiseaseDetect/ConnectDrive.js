@@ -28,7 +28,7 @@ class ConnectDrive extends Component {
                 <div className="team py-5" id="team">
                     <div className="container py-lg-3">
                         <div className="row team-bottom text-center">
-                            {Object.values(gimages).map(i => i.map(i =>
+                            {Object.values(gimages).slice(0,8).map(i => i.map(i =>
                                 <TeamMember
                                     image={i}
                                     key={i}
