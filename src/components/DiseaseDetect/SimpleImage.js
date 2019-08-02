@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Progress } from 'react-sweet-progress';
+import "react-sweet-progress/lib/style.css";
+
 import SingleBanner from "../common/SingleBanner";
 import { load_model } from '../../actions/load_model';
 import { top_three } from '../../helpers/top_three';
 import { get_recc } from '../../actions/get_recc';
+
+let pred = {}
+
 
 class SimpleImage extends Component {
     constructor(props) {
@@ -11,12 +17,17 @@ class SimpleImage extends Component {
         this.state = {
             file: null,
             image: '',
-            highest_predicted: ''
+            submitted: false,
+            predicted: false,
+            reset: true
         }
     }
     onFormSubmit = (e) => {
         e.preventDefault()
         this.fileUpload(this.state.file)
+        this.setState({
+            submitted: true
+        })
     }
 
     onChange = (e) => {
@@ -33,17 +44,19 @@ class SimpleImage extends Component {
     }
     dopred = () => {
         const result = this.props.disease;
-        if (!(Object.keys(result.disease).length === 0)) {
-            const get = top_three(result);
-            console.log(Object.values(get).slice(0, 3))
-            const predicted_disease = Object.values(get).slice(0, 3)[0][1];
-            this.setState({ highest_predicted: predicted_disease })
-            console.log(this.state.highest_predicted)
-            this.props.get_recc(predicted_disease);
-        }
+        this.setState({
+            predicted: true
+        })
+        const get = top_three(result);
+        const predicted_disease = Object.values(get).slice(0, 3)[0][1];
+        const outcomes = Object.values(get).slice(0, 3);
+        pred.result = outcomes;
+        this.props.get_recc(predicted_disease);
     }
 
     render() {
+        const solution = this.props.soln.solution;
+        console.log(solution)
         return (
             <div>
                 <SingleBanner />
@@ -52,13 +65,35 @@ class SimpleImage extends Component {
                     <button type="submit" className="btn btn-success">Submit</button>
                 </form>
 
-                {(this.state.image) ?
+                {(this.state.reset) ?
                     <div>
-                        <img src={this.state.image} alt="diseased_leaf" />
-                        <button className="btn btn-danger" onClick={this.dopred}>Predict</button>
-                    </div>
-                    : null
-                }
+
+                        {(this.state.image) ?
+                            <div>
+                                <img src={this.state.image} alt="diseased_leaf" />
+                                {
+                                    (this.state.submitted) ? <button className="btn btn-danger" onClick={this.dopred}>Predict</button> : null
+
+                                }
+
+                            </div>
+                            : null
+                        }
+
+                        {
+                            (this.state.predicted) ? <div>
+                                {pred.result[0][1]} <Progress percent={Math.round(pred.result[0][0] * 100 * 100) / 100} />
+                                {pred.result[1][1]} <Progress percent={Math.round(pred.result[1][0] * 100 * 100) / 100} />
+                                {pred.result[2][1]} <Progress percent={Math.round(pred.result[2][0] * 100 * 100) / 100} />
+                                Plant: {solution.PLANT}<br />
+                                Predicted Disease: {solution.DISEASE}<br />
+                                Causual Agent: {solution.CAUSUAL_AGENT}<br />
+                                Control Measure: {solution.CONTROL_MEASURES} <br />
+                                Effect/Symptoms: {solution.EFFECT_SYMPTOMS}
+                            </div> : null
+                        }
+                    </div> : null}
+
 
             </div>
         );
