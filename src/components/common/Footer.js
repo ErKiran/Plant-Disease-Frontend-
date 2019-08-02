@@ -40,7 +40,7 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div className="w3l-copy text-center">
-                        <p className="text-da">©{new Date().getFullYear()} Electronics Hacker
+                        <p className="text-da">©{new Date().getFullYear()} Made with <span style={{ color: '#e25555' }}>♥</span> in Paschimanchal Campus
                     </p>
                     </div>
                 </div>

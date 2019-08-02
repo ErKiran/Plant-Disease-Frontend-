@@ -7,7 +7,7 @@ const Navmenu = () => {
             <div className="container">
                 <nav className="py-4 d-lg-flex">
                     <div id="logo">
-                        <h1> <Link to="/"><span className="fa fa-leaf"></span> Detect Disease</Link></h1>
+                        <h1> <Link to="/"><span className="fa fa-leaf"></span> Agro Hacks</Link></h1>
                     </div>
                     <label htmlFor="drop" className="toggle"><span className="fa fa-bars"></span></label>
                     <input type="checkbox" id="drop" />
