@@ -41,7 +41,7 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div className="w3l-copy text-center">
-                        <p className="text-da">Made with <span style={{ color: '#e25555' }}>♥</span> in <a href="https://wrc.edu.np" className="text-danger" target="_blank">Paschimanchal Campus</a>
+                        <p className="text-da">Made with <span style={{ color: '#e25555' }}>♥</span> in <a href="https://wrc.edu.np" className="text-danger" target="_blank" rel="noopener noreferrer">Paschimanchal Campus</a>
                         </p>
                     </div>
                 </div>

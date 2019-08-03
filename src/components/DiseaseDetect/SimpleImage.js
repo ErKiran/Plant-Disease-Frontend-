@@ -9,6 +9,7 @@ import Title from "../common/Title";
 import { load_model } from '../../actions/load_model';
 import { top_three } from '../../helpers/top_three';
 import { get_recc } from '../../actions/get_recc';
+import './space.css'
 
 let pred = {};
 
@@ -70,7 +71,8 @@ class SimpleImage extends Component {
                 <Title title="Upload Image"/>
                 <form onSubmit={this.onFormSubmit}>
                     <input type="file" name="file" onChange={this.onChange} />
-                    <button type="submit" className="btn btn-success">Submit</button>
+                    {(this.state.image)?
+                    <button type="submit" className="btn btn-success">Submit</button>: null}
                     <br />
                 </form>
 
@@ -86,18 +88,22 @@ class SimpleImage extends Component {
                                 <br/>
                                 {' '}
                                 <button className="btn btn-danger" onClick={this.dopred}>Predict</button>
+                                <br/>
+                                <br/>
                             </>
                             : null
                         }
-
+                        <br/>
                         {
-                            (this.state.predicted) ? <div className="text-center">
+                            (this.state.predicted) ? <div className="space">
                                 {pred.result[0][1]} <Progress percent={Math.round(pred.result[0][0] * 100 * 100) / 100} />
                                 {pred.result[1][1]} <Progress percent={Math.round(pred.result[1][0] * 100 * 100) / 100} />
                                 {pred.result[2][1]} <Progress percent={Math.round(pred.result[2][0] * 100 * 100) / 100} />
                                 <Title title={solution.PLANT}>
                                 <h3 className="text-danger"> {solution.DISEASE}</h3>
                                 </Title>
+                                {(solution.CAUSUAL_AGENT)? 
+                                    <>
                                 <Recommend
                                 info1="Causual Agent"
                                 agent={solution.CAUSUAL_AGENT}
@@ -108,6 +114,12 @@ class SimpleImage extends Component {
                                 />
                                 <Title/>
                                 <Title/>
+                                <Title/>
+                                <Title/>
+                                <Title/>
+                                <Title/>
+                                </>
+                                : <img src="images/ok.jpg" alt="ok"/>}
                             </div> : null
                         }
                     </div> : null}
