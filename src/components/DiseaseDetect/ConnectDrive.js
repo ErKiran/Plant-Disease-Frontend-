@@ -11,13 +11,16 @@ class ConnectDrive extends Component {
         this.props.syncGdrive();
     }
     call_it = (img) => {
-        this.props.load_model(img)
-        console.log(img)
+        const res = fetch(img);
+        console.log(res)
+        const formData = new FormData();
+        formData.photo = img
+        formData.append('photo', img)
+        this.props.load_model(res)
     }
     render() {
         const test = this.props.images;
         const gimages = test.photos;
-        this.call_it({ photo: "https://lh3.googleusercontent.com/W96rjPJ2pKr2LoQ6kS25DnSzOVlf6sniN6Z6_fl-DaBj3cn_D9PaOq8negI_Vrt4njHEZRduOPc" })
         return (
             <div>
                 <SingleBanner />
@@ -28,13 +31,13 @@ class ConnectDrive extends Component {
                 <div className="team py-5" id="team">
                     <div className="container py-lg-3">
                         <div className="row team-bottom text-center">
-                            {Object.values(gimages).map(i => i.slice(0, 8).map(i =>
+                            {Object.values(gimages).map(i => i.slice(0, 10).map(i =>
                                 <TeamMember
                                     image={i}
                                     key={i}
                                     class="col-lg-3 col-sm-6 team-grid"
                                 >
-                                    Predict
+                                    <button className="btn btn-danger" >Predict</button> <br />
                                 </TeamMember>
                             ))}
                         </div>

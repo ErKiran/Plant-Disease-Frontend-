@@ -8,7 +8,12 @@ import { load_model } from '../../actions/load_model';
 import { top_three } from '../../helpers/top_three';
 import { get_recc } from '../../actions/get_recc';
 
-let pred = {}
+let pred = {};
+
+const pStyle = {
+    width: '240px',
+    height: '240px'
+};
 
 
 class SimpleImage extends Component {
@@ -58,7 +63,7 @@ class SimpleImage extends Component {
         const solution = this.props.soln.solution;
         console.log(solution)
         return (
-            <div>
+            <div className="text-center">
                 <SingleBanner />
                 <form onSubmit={this.onFormSubmit}>
                     <input type="file" name="file" onChange={this.onChange} />
@@ -70,7 +75,7 @@ class SimpleImage extends Component {
 
                         {(this.state.image) ?
                             <div>
-                                <img src={this.state.image} alt="diseased_leaf" />
+                                <img src={this.state.image} alt="diseased_leaf" style={pStyle} />
                                 {
                                     (this.state.submitted) ? <button className="btn btn-danger" onClick={this.dopred}>Predict</button> : null
 
@@ -81,20 +86,23 @@ class SimpleImage extends Component {
                         }
 
                         {
-                            (this.state.predicted) ? <div>
+                            (this.state.predicted) ? <div className="text-center">
                                 {pred.result[0][1]} <Progress percent={Math.round(pred.result[0][0] * 100 * 100) / 100} />
                                 {pred.result[1][1]} <Progress percent={Math.round(pred.result[1][0] * 100 * 100) / 100} />
                                 {pred.result[2][1]} <Progress percent={Math.round(pred.result[2][0] * 100 * 100) / 100} />
-                                Plant: {solution.PLANT}<br />
-                                Predicted Disease: {solution.DISEASE}<br />
-                                Causual Agent: {solution.CAUSUAL_AGENT}<br />
-                                Control Measure: {solution.CONTROL_MEASURES} <br />
-                                Effect/Symptoms: {solution.EFFECT_SYMPTOMS}
+                                <h1 className="text-danger"> Plant: {solution.PLANT}<br /></h1><br /> <br />
+                                <h1 className="text-info"> Predicted Disease: {solution.DISEASE}<br /></h1>
+                                <h3>Causual Agent:
+                                <br />{solution.CAUSUAL_AGENT}<br /></h3><br /> <br />
+                                <h4>Control Measure:
+                                <br />
+                                    {solution.CONTROL_MEASURES}
+                                    <br /></h4><br /> <br />
+                                <h4>Effect/Symptoms:
+                                <br /> {solution.EFFECT_SYMPTOMS}</h4> <br /> <br />
                             </div> : null
                         }
                     </div> : null}
-
-
             </div>
         );
     }
