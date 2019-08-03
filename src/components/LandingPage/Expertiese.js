@@ -4,14 +4,13 @@ const Expertiese = () => {
     return (
         <section className="blog py-5">
             <div className="container py-md-5">
-                <h3 className="heading mb-sm-5 mb-4 text-center"> Our Products and Services</h3>
+                <h3 className="heading mb-sm-5 mb-4 text-center"> Our Area of Works</h3>
                 <div className="row blog-grids">
                     <div className="col-lg-4 col-md-6 blog-left mb-lg-0 mb-sm-5 pb-lg-0 pb-5">
-                        <img src="images/s1.jpg" className="img-fliud" alt="" />
+                        <img src="images/deep.jpeg" className="img-fliud" alt="" />
                         <div className="blog-info">
-                            <h4>Farming Land <span className="fa fa-pagelines"></span></h4>
-                            <p className="mt-2">Integer sit ut amet mattis quam, sit amet ultricies velit. Praesent ullam corper
-							dui turpis sit.</p>
+                            <h4>Deep Learning <span className="fa fa-pagelines"></span></h4>
+                            <p className="mt-2">Deep Neural Network Based on the VGG16 Artitecture</p>
                         </div>
                     </div>
                     <div className="col-lg-4 col-md-6 blog-middle mb-lg-0 mb-sm-5 pb-lg-0 pb-md-5">
