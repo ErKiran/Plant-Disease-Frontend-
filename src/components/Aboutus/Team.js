@@ -2,6 +2,7 @@ import React from 'react';
 import TeamMember from './TeamMember';
 import SocialIcons from './SocialIcons';
 import SingleIcon from './SingleIcon';
+import Supervisior from './Supervisior';
 
 const Team = () => {
     return (
@@ -9,6 +10,7 @@ const Team = () => {
             <div className="container py-lg-3">
                 <h3 className="heading mb-sm-5 mb-4 text-center"> Our Team</h3>
                 <div className="row team-bottom text-center">
+                    <Supervisior />
                     <TeamMember
                         image="images/kiran.jpg"
                         name="Kiran Adhikari"
