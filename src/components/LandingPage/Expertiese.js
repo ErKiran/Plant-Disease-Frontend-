@@ -9,24 +9,24 @@ const Expertiese = () => {
                     <div className="col-lg-4 col-md-6 blog-left mb-lg-0 mb-sm-5 pb-lg-0 pb-5">
                         <img src="images/deep.jpeg" className="img-fliud" alt="" />
                         <div className="blog-info">
-                            <h4>Deep Learning <span className="fa fa-pagelines"></span></h4>
-                            <p className="mt-2">Deep Neural Network Based on the VGG16 Artitecture</p>
+                            <h4>Deep Learning <span className="fa fa-connectdevelop"></span></h4>
+                            <p className="mt-2">Deep Neural Network Based on the VGG16 Artitecture which predicts the Disease based on image of leaf</p>
                         </div>
                     </div>
                     <div className="col-lg-4 col-md-6 blog-middle mb-lg-0 mb-sm-5 pb-lg-0 pb-md-5">
-                        <img src="images/s2.jpg" className="img-fliud" alt="" />
+                        <img src="images/car.jpg" className="img-fliud" alt="" />
                         <div className="blog-info">
-                            <h4>Cultivation <span className="fa fa-pagelines"></span></h4>
-                            <p className="mt-2">Integer sit ut amet mattis quam, sit amet ultricies velit. Praesent ullam corper
-							dui turpis sit.</p>
+                            <h4>Agro Bot <span className="fa fa-microchip"></span></h4>
+                            <p className="mt-2">Arudino Powered Car with integrated Raspberry Pi Camera to communicate
+                            with Web API via HTTP Protocol and Google Drive</p>
                         </div>
                     </div>
                     <div className="col-lg-4 col-md-6 blog-right mt-lg-0 mt-5 pt-lg-0 pt-md-5">
-                        <img src="images/s3.jpg" className="img-fliud" alt="" />
+                        <img src="images/rest-api.jpg" className="img-fliud" alt="" />
                         <div className="blog-info">
-                            <h4>Harvesting <span className="fa fa-pagelines"></span></h4>
-                            <p className="mt-2">Integer sit ut amet mattis quam, sit amet ultricies velit. Praesent ullam corper
-							dui turpis sit.</p>
+                            <h4>Micro Services<span className="fa fa-arrows-alt"></span></h4>
+                            <p className="mt-2">RESTFul Web Applications to Communicate with the Server, Machine Learning Model and
+                            Agro Bot</p>
                         </div>
                     </div>
                 </div>

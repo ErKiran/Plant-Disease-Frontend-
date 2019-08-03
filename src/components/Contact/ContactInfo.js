@@ -25,7 +25,7 @@ const ContactInfo = () => {
                     </div>
                     <div className="col-10 address-right">
                         <h5>Mail Us</h5>
-                        <p><a href="mailto:info@example.com">fullstackmern@gmail.com</a></p>
+                        <p><a href="mailto:agrohacks@gmail.com">agrohacks@gmail.com</a></p>
                     </div>
                 </div>
             </div>

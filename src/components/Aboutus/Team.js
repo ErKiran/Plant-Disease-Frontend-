@@ -8,9 +8,9 @@ const Team = () => {
     return (
         <div className="team py-5" id="team">
             <div className="container py-lg-3">
+                <Supervisior />
                 <h3 className="heading mb-sm-5 mb-4 text-center"> Our Team</h3>
                 <div className="row team-bottom text-center">
-                    <Supervisior />
                     <TeamMember
                         image="images/kiran.jpg"
                         name="Kiran Adhikari"

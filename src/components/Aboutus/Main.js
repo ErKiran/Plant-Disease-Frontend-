@@ -12,12 +12,11 @@ const Main = () => {
                         <h4 className=""> Our Goal is Healthy Plants, Healthy Crops</h4>
                     </div>
                     <div className="col-lg-6 pl-xl-5 mt-lg-0 mt-4 about-right">
-                        <p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus
-                            at, semper varius orci. Nulla accumsan ac elit in congue. className aptent taciti sociosqu ad litora torquent
-                        per conubia aptent taciti sociosqu ad lorem ipsum dolor.</p>
-                        <p className="pt-3 mt-3 border-top"><span className="fa fa-quote-left text-color mr-2"></span>Nullam consequat sapien ut
-                            leot cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci. Nulla sed accumsan ac elit in congue. className aptent taciti sociosqu ad
-                        litora torquent per taciti sociosqu ad litora torquent.</p>
+                        <p>We tend to bridge the lack of  skilled manpower in the agriculture sector in the rular area of Nepal and other developing Countries.
+                        We tend  to automate the process of  monitoring crops by farmer
+                        utilizing cutting Edge Technologies to attemp to increase
+                        the production of the crop yield.
+                         </p>
                     </div>
                 </div>
             </div>

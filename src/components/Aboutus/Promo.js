@@ -9,7 +9,7 @@ const Promo = () => {
                         <h4 className="abt-text text-capitalize">State-of-the Art Machine Learning and IoT at your Disposal</h4>
                     </div>
                     <div className="col-md-3">
-                        <a href="services.html" className="text-capitalize serv_link btn">our Services</a>
+                        <a href="know_more" className="text-capitalize serv_link btn">Know More</a>
                     </div>
                 </div>
             </div>

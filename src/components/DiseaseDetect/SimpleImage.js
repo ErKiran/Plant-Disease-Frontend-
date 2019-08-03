@@ -4,6 +4,8 @@ import { Progress } from 'react-sweet-progress';
 import "react-sweet-progress/lib/style.css";
 
 import SingleBanner from "../common/SingleBanner";
+import Recommend from "./Recommend";
+import Title from "../common/Title";
 import { load_model } from '../../actions/load_model';
 import { top_three } from '../../helpers/top_three';
 import { get_recc } from '../../actions/get_recc';
@@ -11,8 +13,8 @@ import { get_recc } from '../../actions/get_recc';
 let pred = {};
 
 const pStyle = {
-    width: '240px',
-    height: '240px'
+    width: '380px',
+    height: '380px'
 };
 
 
@@ -65,23 +67,26 @@ class SimpleImage extends Component {
         return (
             <div className="text-center">
                 <SingleBanner />
+                <Title title="Upload Image"/>
                 <form onSubmit={this.onFormSubmit}>
                     <input type="file" name="file" onChange={this.onChange} />
                     <button type="submit" className="btn btn-success">Submit</button>
+                    <br />
                 </form>
 
                 {(this.state.reset) ?
                     <div>
 
-                        {(this.state.image) ?
-                            <div>
-                                <img src={this.state.image} alt="diseased_leaf" style={pStyle} />
-                                {
-                                    (this.state.submitted) ? <button className="btn btn-danger" onClick={this.dopred}>Predict</button> : null
+                        {(this.state.submitted) ?
+                            <>
+                                <div>
+                                    <img src={this.state.image} alt="diseased_leaf" style={pStyle} />
 
-                                }
-
-                            </div>
+                                </div>
+                                <br/>
+                                {' '}
+                                <button className="btn btn-danger" onClick={this.dopred}>Predict</button>
+                            </>
                             : null
                         }
 
@@ -90,16 +95,19 @@ class SimpleImage extends Component {
                                 {pred.result[0][1]} <Progress percent={Math.round(pred.result[0][0] * 100 * 100) / 100} />
                                 {pred.result[1][1]} <Progress percent={Math.round(pred.result[1][0] * 100 * 100) / 100} />
                                 {pred.result[2][1]} <Progress percent={Math.round(pred.result[2][0] * 100 * 100) / 100} />
-                                <h1 className="text-danger"> Plant: {solution.PLANT}<br /></h1><br /> <br />
-                                <h1 className="text-info"> Predicted Disease: {solution.DISEASE}<br /></h1>
-                                <h3>Causual Agent:
-                                <br />{solution.CAUSUAL_AGENT}<br /></h3><br /> <br />
-                                <h4>Control Measure:
-                                <br />
-                                    {solution.CONTROL_MEASURES}
-                                    <br /></h4><br /> <br />
-                                <h4>Effect/Symptoms:
-                                <br /> {solution.EFFECT_SYMPTOMS}</h4> <br /> <br />
+                                <Title title={solution.PLANT}>
+                                <h3 className="text-danger"> {solution.DISEASE}</h3>
+                                </Title>
+                                <Recommend
+                                info1="Causual Agent"
+                                agent={solution.CAUSUAL_AGENT}
+                                info2="Effects"
+                                effect={solution.EFFECT_SYMPTOMS}
+                                info3="Control Measure"
+                                control={solution.CONTROL_MEASURES}
+                                />
+                                <Title/>
+                                <Title/>
                             </div> : null
                         }
                     </div> : null}
